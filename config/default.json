@@ -1,3 +1,6 @@
 {
-    "mongoURI": "mongodb+srv://buu123:buu123@devconnector.ainjs.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+    "mongoURI": "mongodb+srv://buu123:buu123@devconnector.ainjs.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+    "jwtSecret": "mysecret",
+    "githubClientId": "f5aa41579b842f2d3b46",
+    "githubSecret": "09f9c9c722c77abeb54f8caa84117141aa2805b8" 
 }
