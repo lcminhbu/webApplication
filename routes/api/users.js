@@ -7,9 +7,11 @@ const jwt=require('jsonwebtoken');
 const User=require('../../models/User');
 const config = require('config');
 
+const userLog=require('../../logger/log.js');
+
 //@route GET api/users
 //@desc Register user
-//@access Public 
+//@access Public
 router.post('/',[
     check('name', 'Name is required').not().isEmpty(),
     check('email', 'Please include a valid email').isEmail(),
@@ -26,9 +28,11 @@ async (req,res)=>{
     try {
         //see if user exists
         let user=await User.findOne({ email });
-        if(user){
-           return res.status(400).json({error: [{msg: 'User already exists'}]})
+        if(user) {
+            userLog.error(`User ${email} already exists`);
+            return res.status(400).json({error: [{msg: 'User already exists'}]});
         }
+
         //Get user gravatar
         const avatar=gravatar.url(email, {
             s:'200',
@@ -48,20 +52,26 @@ async (req,res)=>{
 
         //Save user to db
         await user.save();
+        userLog.info(`User ${email} created!`);
+
         //Return jsonwebtoken
         const payload ={
             user: {
                 id: user.id
             }
         }
-        jwt.sign(payload, config.get('jwtSecret'), {expiresIn: 360000}, 
+        jwt.sign(payload, config.get('jwtSecret'), {expiresIn: 3600}, 
         (err,token)=>{
-            if(err) throw err;
+            if(err){
+                userLog.error(err.message);
+                throw err;
+            }
             res.json({token});
+            userLog.info(`Token created for user ${email}`);
         });
 
     }catch(error){
-        console.error(error.message);
+        userLog.error(`Server error while registering user: ${error}`);
         res.status(500).send('Server error');
     }
 });

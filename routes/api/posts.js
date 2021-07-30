@@ -7,14 +7,18 @@ const Post= require('../../models/Post');
 const Profile=require('../../models/Profile');
 const User=require('../../models/User');
 
+const postLogger=require('../../logger/log');
+
 //@route POST api/posts
 //@desc Create a post
 //@access Private
 router.post('/', [auth, [
     check('text', 'Text is required').not().isEmpty()]],
     async (req,res)=>{
+        postLogger.info(`User ${req.user.id} required to post`);
         const errors=validationResult(req);
         if(!errors.isEmpty()){
+            errors.array().map(error=>postLogger.error(error.msg));
             return res.status(400).json({errors: errors.array()});
         }
         try {
@@ -26,10 +30,10 @@ router.post('/', [auth, [
                 user: req.user.id
             });
             const post = await newPost.save();
-
+            postLogger.info(`Created post for user ${req.user.id}`);
             res.json(post);
         } catch (error) {
-            console.error(error.message);
+            postLogger.error(`There some errors while posting posts: ` + error);
             res.status(500).send('Server error');
         } 
     }
@@ -41,10 +45,12 @@ router.post('/', [auth, [
 
 router.get('/', auth, async (req, res)=>{
     try {
+        postLogger.info(`User ${req.user.id} required to get all posts`);
         const posts=await Post.find().sort({ date: -1 }); //sort the most recent post
         res.json(posts);
+        postLogger.info(`Sent all posts to user ${req.user.id}`);
     } catch (error) {
-        console.error(error.message);
+        postLogger.error(`There some errors while sending all posts: ` + error);
         res.status(500).send('Server error');
     }
 });
@@ -55,14 +61,15 @@ router.get('/', auth, async (req, res)=>{
 
 router.get('/:id', auth, async (req, res)=>{
     try {
+        postLogger.info(`User ${req.user.id} required to get post by id ${req.params.id}`);
         const post=await Post.findById(req.params.id);
         if(!post){
             return res.status(404).json({msg: 'Post not found'});
         }
         res.json(post);
-
+        postLogger.info(`Sent post has id ${req.params.id} to user ${req.user.id}`);
     } catch (error) {
-        console.error(error.message);
+        postLogger.error(`There some errors while sending post with id` + error);
         if(error.kind==='ObjectId'){
             return res.status(404).json({msg: 'Post not found'});
         }
@@ -76,6 +83,7 @@ router.get('/:id', auth, async (req, res)=>{
 
 router.delete('/:id', auth, async (req, res)=>{
     try {
+        postLogger.info(`User ${req.user.id} required to delete post with id ${req.params.id}`);
         const post=await Post.findById(req.params.id);
 
         if(!post){
@@ -88,9 +96,10 @@ router.delete('/:id', auth, async (req, res)=>{
         }
 
         await post.remove();
+        postLogger.info(`Deleted post ${req.params.id} of user ${req.user.id}`);
         res.json({msg: 'Removed'});
     } catch (error) {
-        console.error(error.message);
+        postLogger.error(`There some errors while sending post with id` + error);
         res.status(500).send('Server error');
     }
 });
@@ -101,6 +110,7 @@ router.delete('/:id', auth, async (req, res)=>{
 
 router.put('/like/:id', auth, async (req, res)=>{
     try {
+        postLogger.info(`User ${req.user.id} required to like post ${req.params.id}`);
         const post= await Post.findById(req.params.id);
 
         //Check if the post has already liked by this user
@@ -109,9 +119,10 @@ router.put('/like/:id', auth, async (req, res)=>{
         }
         post.likes.unshift({user: req.user.id});
         await post.save();
+        postLogger.info(`Added like from ${req.user.id} to post ${req.params.id}`);
         res.json(post.likes);
     } catch (error) {
-        console.error(error.message);
+        postLogger.error(`There some errors while liking` + error);
         res.status(500).send('Server error')
     }
 });
@@ -123,6 +134,7 @@ router.put('/like/:id', auth, async (req, res)=>{
 
 router.put('/unlike/:id', auth, async (req, res)=>{
     try {
+        postLogger.info(`User ${req.user.id} required to unlike post ${req.params.id}`);
         const post= await Post.findById(req.params.id);
 
         //Check if the post has already liked by this user
@@ -134,9 +146,11 @@ router.put('/unlike/:id', auth, async (req, res)=>{
         post.likes.splice(removeIndex, 1);
         
         await post.save();
+        postLogger.info(`Removed like from ${req.user.id} to post ${req.params.id}`);
+
         res.json(post.likes);
     } catch (error) {
-        console.error(error.message);
+        postLogger.error(`There some errors while unliking` + error);
         res.status(500).send('Server error')
     }
 });
@@ -147,8 +161,10 @@ router.put('/unlike/:id', auth, async (req, res)=>{
 //@access Private
 router.post('/comment/:id', [auth, [
     check('text', 'Text is required').not().isEmpty()]], async (req,res)=>{
+        postLogger.info(`User ${req.user.id} required to comment post ${req.params.id}`);
         const errors=validationResult(req);
         if(!errors.isEmpty()){
+            errors.array().map(error=>postLogger.error(error.msg));
             return res.status(400).json({errors: errors.array()});
         }
         try {
@@ -165,9 +181,12 @@ router.post('/comment/:id', [auth, [
             post.comments.unshift(newComment);
             await post.save();
 
+            postLogger.info(`Added comment from ${req.user.id} to post ${req.params.id}`);
+
             res.json(post);
         } catch (error) {
-            console.error(error.message);
+            postLogger.error(`There some errors while commenting` + error);
+
             res.status(500).send('Server error');
         }
         
@@ -179,6 +198,8 @@ router.post('/comment/:id', [auth, [
 
 router.delete('/comment/:id/:comment_id', auth, async (req,res)=>{
     try {
+        postLogger.info(`User ${req.user.id} required to delete comment ${req.params.id} on post ${req.params.comment_id}`);
+
         const post=await Post.findById(req.params.id);
 
         const comment=post.comments.find(comment=>comment.id===req.params.comment_id);
@@ -193,10 +214,12 @@ router.delete('/comment/:id/:comment_id', auth, async (req,res)=>{
         post.comments.splice(removeIndex, 1);
         
         await post.save();
+        postLogger.info(`Deleted comment from ${req.user.id} to post ${req.params.id}`);
+
         res.json(post.comments);
 
     } catch (error) {
-        console.error(error.message);
+        postLogger.error(`There some errors while deleting comment` + error);
         res.status(500).send('Server error');
     }
 })

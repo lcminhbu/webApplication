@@ -7,15 +7,18 @@ const jwt=require('jsonwebtoken');
 const config = require('config');
 const {check, validationResult}=require('express-validator');
 
+const authLogger=require('../../logger/log');
 //@route GET api/auth
 //@desc Test route
 //@access Public 
 router.get('/', auth, async (req,res)=>{
     try {
+        authLogger.info(`User ${req.user.id} required to get auth`);
         const user=await User.findById(req.user.id);
+        authLogger.info(`Sent info to user ${req.user.id}`);
         res.json(user);
     } catch (error) {
-        console.error(error.message);
+        authLogger.error(`There some error while sending auth to user`);
         res.status(500).send('Server error!!');  
     }
 });
@@ -28,12 +31,14 @@ router.post('/',[
     check('password', 'Password is required').exists(),
 ],
 async (req,res)=>{
+
     const errors=validationResult(req);
     if(!errors.isEmpty()){
         return res.status(400).json({errors: errors.array()});
     }
     
     const {email, password}=req.body;
+    authLogger.info(`User ${email} required to login`);
 
     try {
         let user=await User.findOne({ email });
@@ -54,11 +59,12 @@ async (req,res)=>{
         jwt.sign(payload, config.get('jwtSecret'), {expiresIn: 360000}, 
         (err,token)=>{
             if(err) throw err;
+            authLogger.info(`Sent webtoken to user ${email}`);
             res.json({token});
         });
 
     }catch(error){
-        console.error(error.message);
+        authLogger.error(`There some error with logging in: `+ error);
         res.status(500).send('Server error');
     }
 });

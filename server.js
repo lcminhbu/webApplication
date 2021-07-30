@@ -2,7 +2,7 @@ const express = require('express');
 const connectDB = require('./config/db');
 
 const app = express();
-
+const logger=require('./logger/log');
 //Connect db
 connectDB();
 
@@ -20,4 +20,5 @@ app.use('/api/profile', require('./routes/api/profile'));
 
 const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
+app.listen(PORT, () => {console.log(`Server started on port ${PORT}`);
+logger.info(`Server started on port ${PORT}`)});
