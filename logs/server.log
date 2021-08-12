@@ -1,0 +1,192 @@
+Aug-05-2021 08:10:23 info: 	Server started on port 5000
+Aug-05-2021 08:10:26 info: 	Connected to mongodb
+Aug-05-2021 08:12:35 info: 	Server started on port 5000
+Aug-05-2021 08:12:38 info: 	Connected to mongodb
+Aug-05-2021 08:15:35 info: 	Server started on port 5000
+Aug-05-2021 08:15:37 info: 	Connected to mongodb
+Aug-05-2021 08:23:14 info: 	Server started on port 5000
+Aug-05-2021 08:23:17 info: 	Connected to mongodb
+Aug-05-2021 08:23:34 info: 	Server started on port 5000
+Aug-05-2021 08:23:37 info: 	Connected to mongodb
+Aug-05-2021 08:23:55 info: 	Server started on port 5000
+Aug-05-2021 08:23:58 info: 	Connected to mongodb
+Aug-05-2021 08:24:13 info: 	Server started on port 5000
+Aug-05-2021 08:24:16 info: 	Connected to mongodb
+Aug-05-2021 08:26:06 info: 	Server started on port 5000
+Aug-05-2021 08:26:09 info: 	Connected to mongodb
+Aug-05-2021 08:27:24 info: 	Server started on port 5000
+Aug-05-2021 08:27:27 info: 	Connected to mongodb
+Aug-05-2021 08:30:23 info: 	Server started on port 5000
+Aug-05-2021 08:30:26 info: 	Connected to mongodb
+Aug-05-2021 08:42:34 info: 	Server started on port 5000
+Aug-05-2021 08:42:37 info: 	Connected to mongodb
+Aug-05-2021 08:47:33 info: 	Server started on port 5000
+Aug-05-2021 08:47:38 error: Error: 	querySrv ESERVFAIL _mongodb._tcp.devconnector.ainjs.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (dns.js:203:19)
+Aug-05-2021 08:50:09 info: 	Server started on port 5000
+Aug-05-2021 08:50:12 info: 	Connected to mongodb
+Aug-05-2021 08:52:18 info: 	Server started on port 5000
+Aug-05-2021 08:52:21 info: 	Connected to mongodb
+Aug-05-2021 08:52:47 info: 	Server started on port 5000
+Aug-05-2021 08:52:50 info: 	Connected to mongodb
+Aug-05-2021 08:52:56 info: 	Server started on port 5000
+Aug-05-2021 08:52:58 info: 	Connected to mongodb
+Aug-05-2021 08:54:59 info: 	Server started on port 5000
+Aug-05-2021 08:55:02 info: 	Connected to mongodb
+Aug-05-2021 08:55:30 info: 	Server started on port 5000
+Aug-05-2021 08:55:32 info: 	Connected to mongodb
+Aug-05-2021 08:55:49 info: 	Server started on port 5000
+Aug-05-2021 08:55:52 info: 	Connected to mongodb
+Aug-05-2021 08:56:18 info: 	Server started on port 5000
+Aug-05-2021 08:56:22 info: 	Connected to mongodb
+Aug-05-2021 08:56:54 info: 	Server started on port 5000
+Aug-05-2021 08:56:57 info: 	Connected to mongodb
+Aug-05-2021 08:57:48 info: 	Server started on port 5000
+Aug-05-2021 08:57:50 info: 	Connected to mongodb
+Aug-05-2021 13:09:06 info: 	Server started on port 5000
+Aug-05-2021 13:09:10 info: 	Connected to mongodb
+Aug-05-2021 13:10:06 info: 	Server started on port 5000
+Aug-05-2021 13:10:09 info: 	Connected to mongodb
+Aug-05-2021 13:11:31 info: 	Server started on port 5000
+Aug-05-2021 13:11:34 info: 	Connected to mongodb
+Aug-05-2021 13:16:01 info: 	Server started on port 5000
+Aug-05-2021 13:16:04 info: 	Connected to mongodb
+Aug-05-2021 13:17:45 info: 	Server started on port 5000
+Aug-05-2021 13:17:49 info: 	Connected to mongodb
+Aug-05-2021 13:18:01 info: 	Server started on port 5000
+Aug-05-2021 13:18:06 info: 	Connected to mongodb
+Aug-05-2021 13:24:12 info: 	Server started on port 5000
+Aug-05-2021 13:24:16 info: 	Server started on port 5000
+Aug-05-2021 13:24:19 info: 	Connected to mongodb
+Aug-05-2021 13:28:42 info: 	Server started on port 5000
+Aug-05-2021 13:28:45 info: 	Connected to mongodb
+Aug-05-2021 13:29:59 info: 	Server started on port 5000
+Aug-05-2021 13:30:02 info: 	Connected to mongodb
+Aug-05-2021 13:35:12 info: 	Server started on port 5000
+Aug-05-2021 13:35:15 info: 	Connected to mongodb
+Aug-05-2021 13:44:19 info: 	Server started on port 5000
+Aug-05-2021 13:44:22 info: 	Connected to mongodb
+Aug-05-2021 13:44:27 info: 	Server started on port 5000
+Aug-05-2021 13:44:31 info: 	Connected to mongodb
+Aug-05-2021 13:46:03 info: 	Server started on port 5000
+Aug-05-2021 13:46:06 info: 	Connected to mongodb
+Aug-05-2021 13:48:47 info: 	Server started on port 5000
+Aug-05-2021 13:48:51 info: 	Connected to mongodb
+Aug-05-2021 13:57:07 info: 	Server started on port 5000
+Aug-05-2021 13:57:10 info: 	Connected to mongodb
+Aug-05-2021 13:58:55 info: 	User sss@gmail.com created!
+Aug-05-2021 13:58:55 info: 	Token created for user sss@gmail.com
+Aug-05-2021 13:58:56 error: 	User sss@gmail.com already exists
+Aug-05-2021 14:01:50 info: 	User test@gmail.com created!
+Aug-05-2021 14:01:50 info: 	Token created for user test@gmail.com
+Aug-05-2021 14:09:41 info: 	Server started on port 5000
+Aug-05-2021 14:09:49 info: 	Connected to mongodb
+Aug-05-2021 14:17:53 info: 	Server started on port 5000
+Aug-05-2021 14:17:57 info: 	Connected to mongodb
+Aug-05-2021 14:24:04 info: 	Server started on port 5000
+Aug-05-2021 14:24:07 info: 	Connected to mongodb
+Aug-05-2021 14:24:51 info: 	Server started on port 5000
+Aug-05-2021 14:24:54 info: 	Connected to mongodb
+Aug-05-2021 14:28:17 info: 	Server started on port 5000
+Aug-05-2021 14:28:20 info: 	Connected to mongodb
+Aug-05-2021 14:29:45 info: 	Server started on port 5000
+Aug-05-2021 14:29:50 info: 	Connected to mongodb
+Aug-05-2021 21:35:09 info: 	Server started on port 5000
+Aug-05-2021 21:35:13 info: 	Connected to mongodb
+Aug-05-2021 21:40:30 info: 	Server started on port 5000
+Aug-05-2021 21:40:35 info: 	Connected to mongodb
+Aug-05-2021 21:43:28 info: 	Server started on port 5000
+Aug-05-2021 21:43:32 info: 	Connected to mongodb
+Aug-05-2021 21:57:15 info: 	Server started on port 5000
+Aug-05-2021 21:57:19 info: 	Connected to mongodb
+Aug-05-2021 22:02:31 info: 	Server started on port 5000
+Aug-05-2021 22:02:34 info: 	Connected to mongodb
+Aug-05-2021 22:02:46 info: 	Server started on port 5000
+Aug-05-2021 22:02:49 info: 	Server started on port 5000
+Aug-05-2021 22:02:53 info: 	Server started on port 5000
+Aug-05-2021 22:02:57 info: 	Connected to mongodb
+Aug-05-2021 22:03:03 info: 	Server started on port 5000
+Aug-05-2021 22:03:07 info: 	Connected to mongodb
+Aug-05-2021 22:04:08 info: 	Server started on port 5000
+Aug-05-2021 22:04:11 info: 	Connected to mongodb
+Aug-05-2021 22:04:17 info: 	Server started on port 5000
+Aug-05-2021 22:04:20 info: 	Connected to mongodb
+Aug-05-2021 22:05:06 info: 	Server started on port 5000
+Aug-05-2021 22:05:09 info: 	Connected to mongodb
+Aug-06-2021 10:54:24 info: 	Server started on port 5000
+Aug-06-2021 10:54:27 info: 	Connected to mongodb
+Aug-06-2021 10:55:05 info: 	Server started on port 5000
+Aug-06-2021 10:55:08 info: 	Connected to mongodb
+Aug-06-2021 10:57:08 info: 	Server started on port 5000
+Aug-06-2021 10:57:10 info: 	Connected to mongodb
+Aug-06-2021 10:59:08 info: 	Server started on port 5000
+Aug-06-2021 10:59:11 info: 	Connected to mongodb
+Aug-06-2021 11:00:10 info: 	Server started on port 5000
+Aug-06-2021 11:00:12 info: 	Connected to mongodb
+Aug-06-2021 11:00:53 info: 	Server started on port 5000
+Aug-06-2021 11:00:56 info: 	Connected to mongodb
+Aug-06-2021 11:01:41 info: 	Server started on port 5000
+Aug-06-2021 11:01:43 info: 	Connected to mongodb
+Aug-06-2021 11:15:03 info: 	Server started on port 5000
+Aug-06-2021 11:15:05 info: 	Connected to mongodb
+Aug-06-2021 11:48:50 info: 	Server started on port 5000
+Aug-06-2021 11:48:59 info: 	Connected to mongodb
+Aug-06-2021 11:49:08 info: 	Server started on port 5000
+Aug-06-2021 11:49:14 info: 	Connected to mongodb
+Aug-06-2021 11:58:39 info: 	Server started on port 5000
+Aug-06-2021 11:58:41 info: 	Connected to mongodb
+Aug-06-2021 12:00:38 info: 	Server started on port 5000
+Aug-06-2021 12:00:40 info: 	Connected to mongodb
+Aug-06-2021 12:05:02 info: 	Server started on port 5000
+Aug-06-2021 12:05:04 info: 	Connected to mongodb
+Aug-06-2021 12:07:02 info: 	Server started on port 5000
+Aug-06-2021 12:07:04 info: 	Connected to mongodb
+Aug-06-2021 12:42:45 info: 	Server started on port 5000
+Aug-06-2021 12:42:48 info: 	Connected to mongodb
+Aug-06-2021 15:01:28 info: 	Server started on port 5000
+Aug-06-2021 15:01:31 info: 	Connected to mongodb
+Aug-06-2021 15:01:42 info: 	Server started on port 5000
+Aug-06-2021 15:01:44 info: 	Connected to mongodb
+Aug-06-2021 15:11:09 info: 	Server started on port 5000
+Aug-06-2021 15:11:11 info: 	Connected to mongodb
+Aug-06-2021 15:14:46 info: 	Server started on port 5000
+Aug-06-2021 15:14:48 info: 	Connected to mongodb
+Aug-06-2021 15:15:58 info: 	Server started on port 5000
+Aug-06-2021 15:16:02 info: 	Connected to mongodb
+Aug-06-2021 15:16:23 info: 	Server started on port 5000
+Aug-06-2021 15:16:25 info: 	Connected to mongodb
+Aug-06-2021 15:17:50 info: 	User t@gmail.com created!
+Aug-06-2021 15:17:50 info: 	Token created for user t@gmail.com
+Aug-06-2021 15:20:17 info: 	Server started on port 5000
+Aug-06-2021 15:20:20 info: 	Connected to mongodb
+Aug-06-2021 15:20:20 error: 	User t@gmail.com already exists
+Aug-06-2021 15:20:37 info: 	User ww@gmail.com created!
+Aug-06-2021 15:20:37 info: 	Token created for user ww@gmail.com
+Aug-06-2021 15:20:37 error: 	User ww@gmail.com already exists
+Aug-06-2021 15:25:49 error: 	User ww@gmail.com already exists
+Aug-06-2021 15:43:58 info: 	Server started on port 5000
+Aug-06-2021 15:44:00 info: 	Connected to mongodb
+Aug-06-2021 15:47:58 info: 	Server started on port 5000
+Aug-06-2021 15:48:00 info: 	Connected to mongodb
+Aug-06-2021 17:06:28 info: 	Server started on port 5000
+Aug-06-2021 17:06:30 info: 	Connected to mongodb
+Aug-08-2021 07:42:18 info: 	Server started on port 5000
+Aug-08-2021 07:42:21 info: 	Connected to mongodb
+Aug-08-2021 07:57:24 info: 	Server started on port 5000
+Aug-08-2021 07:57:27 info: 	Connected to mongodb
+Aug-08-2021 07:57:40 info: 	Server started on port 5000
+Aug-08-2021 07:57:43 info: 	Connected to mongodb
+Aug-08-2021 07:58:07 info: 	Server started on port 5000
+Aug-08-2021 07:58:10 info: 	Connected to mongodb
+Aug-08-2021 08:00:00 info: 	Server started on port 5000
+Aug-08-2021 08:00:03 info: 	Connected to mongodb
+Aug-08-2021 08:00:36 info: 	User qq@gmail.com created!
+Aug-08-2021 08:00:36 info: 	Token created for user qq@gmail.com
+Aug-08-2021 08:04:40 info: 	Server started on port 5000
+Aug-08-2021 08:04:43 info: 	Connected to mongodb
+Aug-08-2021 08:04:56 info: 	Server started on port 5000
+Aug-08-2021 08:04:58 info: 	Connected to mongodb
+Aug-08-2021 08:05:02 info: 	User 610f2cb326ead536e42ac3cd required to get auth
+Aug-08-2021 08:05:03 info: 	Sent info to user 610f2cb326ead536e42ac3cd
+Aug-08-2021 09:26:54 info: 	Server started on port 5000
+Aug-08-2021 09:26:57 info: 	Connected to mongodb
